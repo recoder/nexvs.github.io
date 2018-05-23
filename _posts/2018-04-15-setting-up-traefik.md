@@ -4,7 +4,7 @@ title: "Настраиваем Traefik"
 #date: "2018-04-15"
 #slug: "traefik"
 #description: "Example content from lanyon. If page description is more than 140 words, it will be shown as post summary on home page and blog index else post excerpt will be shown. Same rule is for html meta description: >140 words in description or first 50 words of posts will be shown as summary. Page excerpt supports markdown formatted summary."
-#category: 
+category: 
   - server
   - architecture
 tags:
