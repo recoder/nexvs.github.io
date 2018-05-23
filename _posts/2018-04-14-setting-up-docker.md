@@ -8,42 +8,56 @@ comments: true
 
 Сносим PHP, ибо [богомерзкий фрактал](https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/):
 
-    sudo apt-get remove -y php-common
+~~~ bash
+sudo apt-get remove -y php-common
+~~~
 
 Сносим Apache, MySQL, PostgreSQL, ибо всё это будет жить в контейнерах:
 
-    sudo apt-get remove -y apache2 mysql-common postgresql-common
+~~~ bash
+sudo apt-get remove -y apache2 mysql-common postgresql-common
+~~~
 
 Ставим Python и PIP в него, потому что надо же на чём-то скриптеть:
 
-    sudo apt-get install -y python python-pip
-    sudo pip install --upgrade pip
+~~~ bash
+sudo apt-get install -y python python-pip
+sudo pip install --upgrade pip
+~~~
 
 Приступаем к главному - устанавливаем Docker:
 
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-    sudo apt-get update && apt-cache policy docker-ce
-    sudo apt-get install -y docker-ce
-    sudo usermod -aG docker ${USER}
+~~~ bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update && apt-cache policy docker-ce
+sudo apt-get install -y docker-ce
+sudo usermod -aG docker ${USER}
+~~~
 
 На всякий случай - ставим ещё и Docker Compose:
 
-    DCVER=`curl -s "https://api.github.com/repos/docker/compose/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'`
-    sudo curl -L https://github.com/docker/compose/releases/download/${DCVER}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
-    sudo curl -L https://raw.githubusercontent.com/docker/compose/${DCVER}/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose  
+~~~ bash
+DCVER=`curl -s "https://api.github.com/repos/docker/compose/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'`
+sudo curl -L https://github.com/docker/compose/releases/download/${DCVER}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo curl -L https://raw.githubusercontent.com/docker/compose/${DCVER}/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose  
+~~~
 
 Кажется, всё. Перезагружаемся и проверяем:
 
-    sudo systemctl status docker
-    docker run hello-world
-    docker-compose --version
+~~~ bash
+sudo systemctl status docker
+docker run hello-world
+docker-compose --version
+~~~
 
 Видим ожидаемые результаты, зачищаем остатки нашей деятельности:
 
-    docker system prune -fa
-    sudo apt-get clean
-    sudo apt-get autoremove
+~~~ bash
+docker system prune -fa
+sudo apt-get clean
+sudo apt-get autoremove
+~~~
 
 Удовлетворённо крякаем, сохраняем снэпшот на будущее, и идём за баночкой Diet Coke.
