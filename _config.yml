@@ -111,6 +111,7 @@ disqus_shortname: recoder-github
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-119752980-1
+google_verify: qi_9k0d1oD_cuSkpXdKPoGChpTKM-3x6FLI_Zw9JyP4
 
 #### For dummy website only - remove if you wish ####
 github_repo: https://github.com/dyndna/lanyon-plus
