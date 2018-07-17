@@ -7,9 +7,9 @@ relative_permalinks: false
 encoding: utf-8
 
 # Setup
-title:               My Website
+title:               ReCoder's Playground
 #tagline:             'foo's website
-description:         Foo's blog...
+description:         ReCoder's blog...
 url:                 http://localhost:4000
 baseurl:  ""
 urlimg: http://localhost:4000/images/
@@ -52,24 +52,24 @@ author:
 
 # Owner/author information
 owner:
-  name:           Foo Boo
-  avatar:         foo.png
+  name:           ReCoder
+  avatar:         recoder.png
   #email:          
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        abcd
-  facebook:       
-  github:         xyz123abc
+  twitter:        recoder
+  facebook:       andrew.kondrashov
+  github:         recoder
   stackexchange:  
-  linkedin:       https://www.linkedin.com/in/foo
+  linkedin:       https://www.linkedin.com/in/andrewkondrashov
   instagram:      
   flickr:
   tumblr:  
-  google_plus:    https://plus.google.com/+foo
+  google_plus:    https://plus.google.com/+AndrewKondrashov-ReCoder
   # orcid and google scholar IDs are different than standard username.
-  orcid: xyz123abc
-  gscholar: xyz123abc
+  #orcid: xyz123abc
+  #gscholar: xyz123abc
 
 ## sidebar links:
 # For external links add external: true
@@ -85,12 +85,12 @@ links:
   - title: <i class="fa fa-archive"></i> Archive
     url: /archive/
   - title: <i class="iconside iconm-wordpress"></i> Old Blog
-    url: https://foo.wordpress.com
+    url: https://recoder.livejournal.com/tag/nexvs
     external: true
   - title: <i class="iconside iconm-envelop"></i> Contact
     url: /contact/
   - title: <i class="iconside iconm-twitter"></i> Twitter
-    url: https://twitter.com/abcd
+    url: https://twitter.com/recoder
     external: true
   - title: <i class="iconside iconm-feed2"></i> Feed
     url: /feed.xml
@@ -103,7 +103,7 @@ links:
 #twitter_widget_id: xyz123abc
 
 # Add disqus username for Disqus comment board:
-disqus_shortname: foo
+disqus_shortname: recoder
 
 # Analytics and webmaster tools stuff goes here
 #google_analytics:   xyz123abc
